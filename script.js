@@ -12,7 +12,7 @@ Password_Input.addEventListener('input', () => {
     if ((score == 0 && value.length > 0) && (value.length < 8 && !/(\d.*){2,}/.test(value) && ! /[^A-Za-z0-9]/.test(value))) {
         bar.style.width = '5%';
         bar.style.backgroundColor = ' #090909';
-        Strength_text.innerText = "Very Week";
+        Strength_text.innerText = "Very Weak";
         Strength_text.style.color = ' #090909';
         updateSTATUS(length, false);
         updateSTATUS(digits, false);
@@ -72,4 +72,5 @@ toggle_password.addEventListener('click', function () {
     this.textContent = type === 'password' ? '👁️' : '🙈';
 
 });
+
 

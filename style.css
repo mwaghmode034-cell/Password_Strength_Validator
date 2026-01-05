@@ -1,0 +1,95 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #556b55;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    width: 350px;
+    text-align: center;
+}
+
+.input-container {
+    position: relative;
+    width: 100%;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    padding-right: 40px;
+    border: 2px solid #e0e0e0;
+    border-radius: 5px;
+    box-sizing: border-box;
+    outline: none;
+}
+
+#togglePassword {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    user-select: none;
+    font-size: 1.2rem;
+}
+
+.Strength_Meter {
+    height: 10px;
+    background-color: #e0e0e0;
+    margin-top: 20px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.Strength_Bar {
+    height: 100%;
+    width: 0%;
+    transition: width 0.4s ease, background-color 0.4s;
+}
+
+#strengthText {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    color: #333;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+    text-align: left;
+}
+
+li {
+    margin: 10px 0;
+    font-size: 0.85rem;
+    transition: 0.3s;
+}
+
+li.invalid {
+    color: #e74c3c;
+}
+
+li.invalid::before {
+    content: "✘ ";
+    margin-right: 8px;
+}
+
+li.valid {
+    color: #27ae60;
+}
+
+li.valid::before {
+    content: "✔ ";
+    margin-right: 8px;
+}
